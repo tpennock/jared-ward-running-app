@@ -3,8 +3,7 @@ dist
 .tmp
 .sass-cache
 .log
-app/scripts/constants.js
-app/scripts/app-final.js
+npm-debug.log
 !bin
 # Intellij project files
 *.iml

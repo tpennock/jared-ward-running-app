@@ -1,0 +1,148 @@
+@import '../modules/colors';
+@import '../modules/fonts';
+@import '../modules/sizes';
+
+// forms
+.form-header {
+  &__head {
+    color: $vivint-orange;
+    font-size: 24px;
+    line-height: 1.2em;
+    margin-bottom: $single-spacing
+  }
+  &__sub {
+    font-size: 14px;
+    line-height: 1.4em;
+    padding-bottom: $single-spacing;
+  }
+}
+
+form {
+  // hint
+  /* Setup animations similar to the ng-messages */
+  .hint {
+    /* Position the hint */
+    position: absolute;
+    left: 2px;
+    right: auto;
+    bottom: 7px;
+    /* Copy styles from ng-messages */
+    font-size: 12px;
+    line-height: 14px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    /* Set our own color */
+    color: $medium-gray;
+    font-style: italic;
+  }
+  .hint.ng-hide,
+  .hint.ng-enter,
+  .hint.ng-leave.ng-leave-active {
+    bottom: 26px;
+    opacity: 0;
+  }
+  .hint.ng-leave,
+  .hint.ng-enter.ng-enter-active {
+    bottom: 7px;
+    opacity: 1;
+  }
+
+  .button.block:first-of-type {
+    margin-top: $double-spacing;
+  }
+}
+
+input {
+  outline: none;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-book;
+  font-size: $body-text;
+  color: $text-color;
+  padding: 0;
+  @include placeholder {
+    color: $text-color-light;
+  }
+}
+
+textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+  background-color: $form-color;
+  font-family: $font-light;
+  color: $text-color;
+  box-shadow: none;
+}
+
+/* ========================================================================
+   Component: input group (with icon support)
+ ========================================================================== */
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+  input {
+    -webkit-appearance: none;
+  }
+  .input-group-addon,
+  .input-group-button {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: $white;
+    padding: 0 $single-spacing;
+    &.right {
+      padding: 0;
+      width: 1%;
+    }
+    .button {
+      padding: 0 6px;
+      min-width: 44px;
+      border-radius: 0;
+    }
+    i {
+      font-size: $medium-icon;
+    }
+  }
+  input {
+    display: table-cell;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+}
+
+// radio-toggle (like on thermostat settings - mode/fan)
+label.radio-toggle {
+  input {
+    display: none;
+    & + span {
+      display: inline-block;
+      height: 26px;
+      color: $text-color-light;
+      width: 25%;
+      max-width: 50px;
+      min-width: 33px;
+      text-align: center;
+      font-family: $font-medium;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 26px;
+      background-clip: padding-box;
+      @include border-left-radius(999px);
+      @include border-right-radius(999px);
+      @include transition(color .25s, background-color .25s);
+    }
+    &:checked + span {
+      background-color: $vivint-orange;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="jwr-container">
+    <nav>
+        <div
+        class="clickable"
+        ng-repeat="link in $ctrl.links"
+        ng-bind="link.label"
+        ui-sref="{{link.state}}">
+        </div>
+    </nav>
+
+    <!--ui-view-->
+    <div class="table-cell main-view"
+         ui-view>
+    </div>
+</div>

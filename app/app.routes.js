@@ -8,7 +8,7 @@ var stripTrailingSlashes = function($injector, $location) {
     }
 };
 
-angular.module('jwrcApp').config(['$stateProvider', '$urlRouterProvider',
+angular.module('jwrApp').config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
             .rule(stripTrailingSlashes)
@@ -16,19 +16,25 @@ angular.module('jwrcApp').config(['$stateProvider', '$urlRouterProvider',
             .when('', '/')
         ;
         $stateProvider
-            .state('main', {
-                abstract: true,
-                templateUrl: ''
-            })
-
-            .state('main.home', {
+            .state('home', {
                 url: '/',
-                views: {
-                    content: {
-                        controller: 'GridCntl as $grid',
-                        templateUrl: 'components/core/grid/grid.html'
-                    }
-                }
+                templateUrl: '/components/home/home.html',
+                // controller: 'HomeCtrl as $home'
+            })
+            .state('apparel', {
+                url: '/apparel',
+                templateUrl: '/components/apparel/apparel.html',
+                // controller: 'ApparelCtrl as $apparel'
+            })
+            .state('bio', {
+                url: '/meet-us',
+                templateUrl: '/components/bio/bio.html',
+                // controller: 'BioCtrl as $bio'
+            })
+            .state('coaching', {
+                url: '/coaching',
+                templateUrl: '/components/coaching/coaching.html',
+                // controller: 'CoachingCtrl as $coaching'
             })
         ;
     }

@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('jwrcApp', [
+angular.module('jwrApp', [
         // templates
-        'jwrcApp.templates', // gulp-generated $templateCache module
+        'jwrApp.templates', // gulp-generated $templateCache module
+
+        // components
+        'jwrApp.components',
 
         // non-core angular modules
         'ngAnimate',
@@ -13,23 +16,22 @@ angular.module('jwrcApp', [
         'ngRoute',
         'ngResource',
         'ngSanitize',
-        'ngTouch',
+        // 'ngTouch',
 
         // third party modules
-        'hmTouchEvents',
         'LocalStorageModule',
-        'ui.router',
-        'ui.mask'
+        'ui.router'
     ])
     .constant('TweenMax', TweenMax)
     .constant('TimelineMax', TimelineMax)
     .constant('Modernizr', Modernizr)
-    .run(function($rootScope, Modernizr) {
+    .run(['$rootScope', 'Modernizr', function($rootScope, Modernizr) {
         Modernizr.addTest('firefox', function () {
             return !!navigator.userAgent.match(/firefox/i);
         });
     }
-);
+]);
 
 // templates
-angular.module('jwrcApp.templates', []);
+angular.module('jwrApp.templates', []);
+angular.module('jwrApp.components', []);

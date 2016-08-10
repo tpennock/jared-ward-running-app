@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="en" class="no-js" ng-app="jwrcApp">
+<html lang="en" class="no-js" ng-app="jwrApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title ng-bind="$root.page.title">Jared Ward Running Company</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="robots" content="noindex">
 
     <!-- IE EDGE telephone format detection override :( Thanks again IE-->
     <meta name="format-detection" content="telephone=no">
@@ -24,7 +23,7 @@
     <link rel="stylesheet" href="libs/angular-material/1.0.9/angular-material.min.css">
     <!-- endbuild -->
 
-    <!-- jwrcApp styles-->
+    <!-- jwrApp styles-->
     <!-- this file is auto-generated via gulp styles(-deploy) -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -38,12 +37,10 @@
     <script src="scripts/polyfill.js"></script>
     <!-- endbuild -->
 </head>
-<body ng-controller="MainCntl" ng-class="rootClasses()">
+<body>
 
     <!-- app container -->
-    <!--<viv-main></viv-main>-->
-    <!--<ng-include src="'components/core/container/container.html'"></ng-include>-->
-    test
+    <jwr-container></jwr-container>
 
     <!-- build:jsVendor scripts/vendor.js -->
     <!-- jquery -->
@@ -95,6 +92,9 @@
     <!-- build:jsApp scripts/app.js -->
     <script src="app.module.js"></script>
     <script src="app.routes.js"></script>
+
+    <!-- components -->
+    <script src="components/core/container/container.js"></script>
     <!-- endbuild -->
 
     <!-- vivintApp templates-->

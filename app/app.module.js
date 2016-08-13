@@ -12,24 +12,16 @@ angular.module('jwrApp', [
         'ngAria',
         'ngCookies',
         'ngMessages',
-        'ngMaterial',
         'ngRoute',
         'ngResource',
         'ngSanitize',
-        // 'ngTouch',
+        'ngTouch',
 
         // third party modules
         'LocalStorageModule',
         'ui.router'
     ])
-    .constant('TweenMax', TweenMax)
-    .constant('TimelineMax', TimelineMax)
-    .constant('Modernizr', Modernizr)
-    .run(['$rootScope', 'Modernizr', function($rootScope, Modernizr) {
-        Modernizr.addTest('firefox', function () {
-            return !!navigator.userAgent.match(/firefox/i);
-        });
-    }
+    .run(['$rootScope', function($rootScope) {}
 ]);
 
 // templates

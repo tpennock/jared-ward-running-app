@@ -85,13 +85,13 @@ gulp.task('webserver', function () {
 
 // This will do a sass compile and concat of our scss files when they change
 gulp.task('styles', function () {
-    return gulp.src(['app/**/*.scss', '!app/libs', '!app/libs/**']) // ignore everything in app/libs
+    return gulp.src(['app/**/*.scss', '!app/js', '!app/js/**']) // ignore everything in app/libs
         .pipe(sourceMaps.init())
         // Do the sass compile and make sure we don't fail on errors
         .pipe(sass().on('error', sass.logError))
         .pipe(sourceMaps.write())
         // Concat into a single css file
-        .pipe(concat('main.css'))
+        .pipe(concat('styles.css'))
         //catch errors
         .on('error', gutil.log)
         // Put main.css in the .tmp folder
@@ -122,11 +122,11 @@ gulp.task('images-deploy', function () {
 
 // This task does a sass compile, concatenation, minification, and copy for deployment
 gulp.task('styles-deploy', function () {
-    return gulp.src(['app/**/*.scss', '!app/libs', '!app/libs/**']) // ignore everything in app/libs
+    return gulp.src(['app/**/*.scss', '!app/js', '!app/js/**']) // ignore everything in app/js
         // Do the sass compile and make sure we don't fail on errors
         .pipe(sass())
         // Concat into a single css file
-        .pipe(concat('main.css'))
+        .pipe(concat('style.css'))
         .pipe(minifyCSS())
         // Where to save our final, compressed css file
         .pipe(gulp.dest('dist/styles'));
@@ -139,9 +139,7 @@ gulp.task('html-deploy', function() {
         // single scripts.js references (ex: build:js scripts/app.js)
         .pipe(usemin({
             html: [minifyHTML()], // minifies index.html
-            cssAngularMaterial: [],
-            jsPreload: [uglify(config.uglify)], // modernizr and stuff that needs to be loaded first
-            jsLocal: [uglify()], // any of our custom js (not angular)
+            css: [minifyCSS()],
             jsVendor: [uglify(config.uglify)], // third party libs
             jsApp: [annotate(), uglify()] // app.js
         }))
@@ -162,7 +160,6 @@ gulp.task('template-cache-deploy', function () {
 gulp.task('files-deploy', function() {
     gulp.src([
         'app/styles/fonts/**/*',
-        'app/*.txt',
         'app/*.{png,ico,txt}',
         'app/.htaccess'
     ], {'base': 'app'})
@@ -181,7 +178,7 @@ gulp.task('clean', function () {
 // This is the default task. It starts a server for development
 // purposes with all files being watched for live reload purposes
 gulp.task('default', ['clean'], function () {
-    gulp.start('webserver', 'template-cache', 'styles');
+    gulp.start('webserver', 'template-cache');
     liveReload.listen();
     // Watch these files and reload if any of them change
     // exclude libs/
@@ -197,5 +194,5 @@ gulp.task('server', ['default']);
 
 //this is our deployment task, it will set everything for deployment-ready files
 gulp.task('build', ['clean'], function () {
-    gulp.start('styles-deploy', 'html-deploy', 'images-deploy', 'template-cache-deploy', 'files-deploy');
+    gulp.start('html-deploy', 'images-deploy', 'template-cache-deploy', 'files-deploy');
 });

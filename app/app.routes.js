@@ -18,22 +18,22 @@ angular.module('jwrApp').config(['$stateProvider', '$urlRouterProvider',
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '/components/home/home.html',
+                templateUrl: '/pages/home.html',
                 // controller: 'HomeCtrl as $home'
             })
             .state('apparel', {
                 url: '/apparel',
-                templateUrl: '/components/apparel/apparel.html',
+                templateUrl: '/pages/apparel.html',
                 // controller: 'ApparelCtrl as $apparel'
             })
             .state('bio', {
                 url: '/meet-us',
-                templateUrl: '/components/bio/bio.html',
+                templateUrl: '/pages/bio.html',
                 // controller: 'BioCtrl as $bio'
             })
             .state('coaching', {
                 url: '/coaching',
-                templateUrl: '/components/coaching/coaching.html',
+                templateUrl: '/pages/coaching.html',
                 // controller: 'CoachingCtrl as $coaching'
             })
         ;

@@ -1,9 +1,10 @@
 node_modules
 dist
+theme
 .tmp
 .sass-cache
-.log
-npm-debug.log
+*.log
+*.zip
 !bin
 # Intellij project files
 *.iml

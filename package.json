@@ -71,7 +71,7 @@
     "globals": {
       "angular": false,
       "$": false,
-      "vivintApp": false
+      "jwrApp": false
     },
     "immed": true,
     "indent": 4,

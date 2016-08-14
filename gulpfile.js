@@ -55,7 +55,7 @@ var config = {
         }
     },
     templateCache: {
-        module: 'vivintApp.templates',
+        module: 'jwrApp.templates',
         standalone: true
         //TODO: convert all references to templates with ./
         //root: './'

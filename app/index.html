@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/spacings.css" />
     <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <!-- endbuild -->
 
     <!-- Favicons -->
@@ -44,7 +45,7 @@
     </div>
 
     <!-- app container -->
-    <ng-include src="'components/core/container/container.html'"></ng-include>
+    <jwr-container></jwr-container>
 
 
     <!-- build:jsVendor scripts/vendor.js -->
@@ -84,14 +85,20 @@
     <!-- endbuild -->
 
     <!-- build:jsApp scripts/app.js -->
-    <script src="app.module.js"></script>
-    <script src="app.routes.js"></script>
+    <script src="app.js"></script>
+
+    <!-- main -->
+    <script src="components/core/main.js"></script>
 
     <!-- components -->
-    <script src="components/core/main/main.js"></script>
+    <script src="components/banner/banner.js"></script>
+
+    <script src="components/core/container/container.js"></script>
+    <script src="components/core/footer/footer.js"></script>
+    <script src="components/core/nav/nav.js"></script>
     <!-- endbuild -->
 
-    <!-- vivintApp templates-->
+    <!-- template caching -->
     <!-- this file is auto-generated via gulp template-cache(-deploy) -->
     <script src="scripts/templates.js"></script>
 

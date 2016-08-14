@@ -85,7 +85,7 @@
 
     // Closes the Responsive Menu on Menu Item Click
     function initOnepagenav(){
-        
+
         $('.navigation-overlay .navbar-collapse ul li a, .nav-type-4 .navbar-collapse ul li a').on('click',function() {
             $('.navbar-toggle:visible').click();
         });

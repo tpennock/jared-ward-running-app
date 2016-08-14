@@ -1,25 +1,18 @@
 <div class="jwr-container">
 
     <!--nav-->
-    <!--<ng-include src="'components/core/nav/nav.html'"></ng-include>-->
+    <jwr-nav></jwr-nav>
 
     <!--main-wrapper-->
     <div class="jwr-site main-wrapper-onepage main oh">
-
-        <!--text-rotator banner-->
-        <ng-include src="'components/text-rotator/text-rotator.html'"></ng-include>
+        <!--banner-->
+        <jwr-banner></jwr-banner>
 
         <!--ui-view-->
         <ui-view></ui-view>
 
-        <!-- Google Map -->
-        <!--<div id="google-map" class="gmap" data-address="V Tytana St, Manila, Philippines"></div>-->
-
-        <ng-include src="'components/core/footer/footer.html'"></ng-include>
-
-        <div id="back-to-top">
-            <a href="#top"><i class="fa fa-angle-up"></i></a>
-        </div>
+        <!--footer-->
+        <jwr-footer></jwr-footer>
     </div>
 
 </div>

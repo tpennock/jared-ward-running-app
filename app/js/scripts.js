@@ -349,21 +349,21 @@
         (function($){
             "use strict";
 
-            $("#owl-partners").owlCarousel({
-
-                autoPlay: 3000,
-                pagination: false,
-                itemsCustom: [
-                  [0, 2],      
-                  [450, 2],
-                  [700, 3],
-                  [1000, 3],
-                  [1200, 4],
-                  [1400, 5],
-                  [1600, 6]
-                ],
-
-            })
+            // $("#owl-partners").owlCarousel({
+            //
+            //     autoPlay: 3000,
+            //     pagination: false,
+            //     itemsCustom: [
+            //       [0, 2],
+            //       [450, 2],
+            //       [700, 3],
+            //       [1000, 3],
+            //       [1200, 4],
+            //       [1400, 5],
+            //       [1600, 6]
+            //     ],
+            //
+            // })
 
             // Owl Single
             $("#owl-single").owlCarousel({
@@ -429,17 +429,17 @@
             
 
             // Testimonials
-            $("#owl-testimonials").owlCarousel({
-         
-                navigation: false,
-                slideSpeed: 300,
-                pagination: true,
-                paginationSpeed: 400,
-                singleItem: true,
-                autoPlay: 4000,
-                stopOnHover: true
-         
-            });
+            // $("#owl-testimonials").owlCarousel({
+            //
+            //     navigation: false,
+            //     slideSpeed: 300,
+            //     pagination: true,
+            //     paginationSpeed: 400,
+            //     singleItem: true,
+            //     autoPlay: 4000,
+            //     stopOnHover: true
+            //
+            // });
 
             // Owl Hero Slider
             $("#owl-slider-one-img").owlCarousel({
@@ -536,10 +536,10 @@ $(window).scroll(function(event){
     }
 });
 
-$('a[href="#top"]').on('click',function(){
-    $('html, body').animate({scrollTop: 0}, 'slow');
-    return false;
-});
+// $('a[href="#top"]').on('click',function(){
+//     $('html, body').animate({scrollTop: 0}, 'slow');
+//     return false;
+// });
 
 
 /* Full Height Container

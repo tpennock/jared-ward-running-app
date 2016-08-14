@@ -1,6 +1,21 @@
 /*-------------------------------------------------------*/
 /* Custom overrides
 /*-------------------------------------------------------*/
+.jwr-hero {
+    max-height: 700px;
+    height: 100vh;
+}
+
 .container-full-height {
     height: 100vh;
+}
+
+.aligned-center {
+    text-align: center;
+}
+.aligned-right {
+    text-align: right;
+}
+.aligned-left {
+    text-align: left;
 }

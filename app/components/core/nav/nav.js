@@ -34,10 +34,6 @@ angular.module('jwrApp.core').component('jwrNav', {
             {
                 url: 'http://www.linkedin.com',
                 icon: 'fa-linkedin'
-            },
-            {
-                url: 'http://www.twitter.com',
-                icon: 'fa-twitter'
             }
         ];
     }

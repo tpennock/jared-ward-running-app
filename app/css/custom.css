@@ -19,3 +19,51 @@
 .aligned-left {
     text-align: left;
 }
+
+.aligned-top {
+    vertical-align: top;
+}
+.aligned-middle {
+    vertical-align: middle;
+}
+.aligned-bottom {
+    vertical-align: bottom;
+}
+
+
+.jwr-table {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.jwr-table-row {
+    display: table-row;
+    width: 100%;
+}
+
+.jwr-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+
+.jwr-page-title {
+    padding: 30px 0;
+}
+
+.jwr-page-title .logo {
+    height: 160px;
+}
+
+
+.jwr-blue {
+    background-color: #3661AA;
+}
+.jwr-light-blue {
+    background-color: #98AfD3;
+}
+.white {
+    background-color: #ffffff;
+}

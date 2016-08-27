@@ -13,12 +13,12 @@ angular.module('jwrApp.core').component('jwrNav', {
                 state: 'home'
             },
             {
-                label: 'Coaching',
-                state: 'coaching'
-            },
-            {
                 label: 'Meet us',
                 state: 'bio'
+            },
+            {
+                label: 'Coaching',
+                state: 'coaching'
             },
             {
                 label: 'Apparel',

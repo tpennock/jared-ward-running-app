@@ -78,3 +78,12 @@
 .white {
     background-color: #ffffff;
 }
+
+
+.our-team .team-wrap {
+    padding: 15px 40px;
+}
+
+.our-team.long-bios .row {
+    padding: 20px 0;
+}

@@ -20,13 +20,16 @@ angular.module('jwrApp.blocks').component('jwrBanner', {
 
             switch ($state.current.name) {
                 case 'coaching':
-                    img += 'b1-coaching.jpg';
+                    img += 'b1.jpg'; //b1-coaching.jpg
                     break;
                 case 'bio':
                     img += 'b1-bio.jpg';
                     break;
                 case 'apparel':
-                    img += 'b1-apparel.jpg';
+                    img += 'b1-alt-2.jpg';
+                    break;
+                case 'home':
+                    img += 'b1-home.jpg';
                     break;
                 default:
                     img += 'b1.jpg';

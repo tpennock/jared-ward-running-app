@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('jwrApp.core').controller('MainCtrl',
-    function($rootScope, $scope, $state) {
+    function($rootScope, $scope, $state, $timeout, $interval) {
 
         $rootScope.page = {
             title: ''

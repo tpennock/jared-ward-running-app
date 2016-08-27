@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.section-wrap-mp {
+    padding: 60px 0;
+}
+
 .container-full-height {
     height: 100vh;
 }
@@ -50,11 +54,18 @@
 
 
 .jwr-page-title {
-    padding: 30px 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.jwr-page-title section > * {
+    line-height: 100px;
+    padding: 0;
+    margin: 0;
 }
 
 .jwr-page-title .logo {
-    height: 160px;
+    height: 100px;
 }
 
 

@@ -69,6 +69,11 @@
 }
 
 
+.jwr-accomplishments {
+    padding: 40px;
+}
+
+
 .jwr-blue {
     background-color: #3661AA;
 }
@@ -90,4 +95,8 @@
 
 .result-box {
     background-size: cover;
+}
+
+.blockquote-style-2 {
+    border-left: none;
 }

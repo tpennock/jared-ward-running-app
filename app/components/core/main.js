@@ -12,5 +12,9 @@ angular.module('jwrApp.core').controller('MainCtrl',
             return false;
         };
 
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            $rootScope.toTop();
+        });
+
     }
 );

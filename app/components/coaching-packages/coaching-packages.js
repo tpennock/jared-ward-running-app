@@ -15,7 +15,7 @@ angular.module('jwrApp.blocks').component('jwrCoachingPackages', {
                     'Custom Fitness Plan by Jared',
                     'Access to Jared\'s weekly training tips'
                 ],
-                link: '',
+                link: 'https://jared-ward-running-co.myshopify.com/products/basic-running-plan',
                 color: ''
             },
             {
@@ -27,7 +27,7 @@ angular.module('jwrApp.blocks').component('jwrCoachingPackages', {
                     '1-on-1 email access with Jared',
                     'Specialized racing advice'
                 ],
-                link: '',
+                link: 'https://jared-ward-running-co.myshopify.com/products/intermediate-running-plan',
                 color: ''
             },
             {
@@ -39,7 +39,7 @@ angular.module('jwrApp.blocks').component('jwrCoachingPackages', {
                     'Weekly Calls with Jared (30 min)',
                     'Individualized racing strategies and tips from Jared'
                 ],
-                link: '',
+                link: 'https://jared-ward-running-co.myshopify.com/products/advanced-running-plan',
                 color: ''
             },
             {
@@ -52,7 +52,7 @@ angular.module('jwrApp.blocks').component('jwrCoachingPackages', {
                     'Real-time Coaching Tips',
                     'Monthly Dietitian assessments (30 min)**'
                 ],
-                link: '',
+                link: 'https://jared-ward-running-co.myshopify.com/products/premium-running-plan',
                 color: ''
             }
         ];

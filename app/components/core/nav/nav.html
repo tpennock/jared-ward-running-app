@@ -1,52 +1,102 @@
-<!-- Navigation -->
-<header class="nav-type-1">
+<header class="nav-type-2">
 
-    <nav class="navbar navbar-fixed-top">
-        <div class="navigation-overlay">
-            <div class="container-fluid relative">
+    <nav class="navbar navbar-static-top">
+        <div class="navigation">
+            <div class="container relative">
+
                 <div class="row">
 
                     <div class="navbar-header">
+                        <div class="logo-container">
+                            <div class="logo-wrap">
+                                <a ui-sref="home">
+                                    <img class="logo" src="img/jwrc/logo/Logo-filled-blue.svg" alt="logo">
+                                </a>
+                            </div>
+                        </div>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                    </div>
 
-                        <!-- Logo -->
-                        <div class="logo-container">
-                            <div class="logo-wrap">
-                                <a ui-sref="home">
-                                    <img class="logo" src="img/jwrc/logo/Logo-filled-white.svg" alt="logo">
-                                </a>
-                            </div>
-                        </div>
-                    </div> <!-- end navbar-header -->
+                    <div class="col-md-9 nav-wrap right">
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
 
-                    <div class="col-md-8 col-xs-12 nav-wrap">
-                        <div class="collapse navbar-collapse text-center" id="navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
 
-                            <ul class="navbar-nav text-center">
                                 <li ui-sref-active="active" ng-repeat="link in $nav.navLinks">
                                     <a ui-sref="{{link.state}}" ng-bind="link.label"></a>
                                 </li>
+
+                                <!--<li class="dropdown active">-->
+                                    <!--<a href="#" class="dropdown-toggle">Page</a>-->
+                                    <!--<ul class="dropdown-menu">-->
+                                        <!--<li><a href="#">Sub page</a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
                             </ul>
-
                         </div>
-                    </div> <!-- end col -->
-
-                    <div class="menu-socials hidden-sm hidden-xs">
-                        <ul>
-                            <li ng-repeat="link in $nav.socialLinks">
-                                <a ng-href="{{link.url}}"><i class="fa {{link.icon}}"></i></a>
-                            </li>
-                        </ul>
                     </div>
 
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </div> <!-- end navigation -->
-    </nav> <!-- end navbar -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 
-</header> <!-- end navigation -->
+
+<!-- Navigation -->
+<!--<header class="nav-type-1">-->
+
+    <!--<nav class="navbar navbar-fixed-top">-->
+        <!--<div class="navigation-overlay">-->
+            <!--<div class="container-fluid relative">-->
+                <!--<div class="row">-->
+
+                    <!--<div class="navbar-header">-->
+                        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">-->
+                            <!--<span class="sr-only">Toggle navigation</span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                        <!--</button>-->
+
+                        <!--<div class="logo-container">-->
+                            <!--<div class="logo-wrap">-->
+                                <!--<a ui-sref="home">-->
+                                    <!--<img class="logo" src="img/jwrc/logo/Logo-filled-white.svg" alt="logo">-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="col-md-8 col-xs-12 nav-wrap">-->
+                        <!--<div class="collapse navbar-collapse text-center" id="navbar-collapse">-->
+
+                            <!--<ul class="navbar-nav text-center">-->
+                                <!--<li ui-sref-active="active" ng-repeat="link in $nav.navLinks">-->
+                                    <!--<a ui-sref="{{link.state}}" ng-bind="link.label"></a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="menu-socials hidden-sm hidden-xs">-->
+                        <!--<ul>-->
+                            <!--<li ng-repeat="link in $nav.socialLinks">-->
+                                <!--<a ng-href="{{link.url}}"><i class="fa {{link.icon}}"></i></a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
+
+<!--</header>-->

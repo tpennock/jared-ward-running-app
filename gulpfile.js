@@ -112,7 +112,7 @@ gulp.task('template-cache', function () {
 // This task compresses and copies all the images
 gulp.task('images-deploy', function () {
     return gulp.src(['app/img/**/*'])
-        .pipe(imageMin({ optimizationLevel: 0, progressive: true, interlaced: true }))
+        .pipe(imageMin({ optimizationLevel: 5, progressive: true, interlaced: true }))
         .pipe(gulp.dest('dist/img'));
 });
 

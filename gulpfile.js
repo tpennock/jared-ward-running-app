@@ -59,10 +59,6 @@ var config = {
         standalone: true
         //TODO: convert all references to templates with ./
         //root: './'
-    },
-    servers: {
-        buildserver: 'tp-builds.vivint.com',
-        mobileapi: 'localhost',
     }
 };
 
@@ -116,7 +112,7 @@ gulp.task('template-cache', function () {
 // This task compresses and copies all the images
 gulp.task('images-deploy', function () {
     return gulp.src(['app/img/**/*'])
-        .pipe(imageMin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+        .pipe(imageMin({ optimizationLevel: 0, progressive: true, interlaced: true }))
         .pipe(gulp.dest('dist/img'));
 });
 
@@ -159,7 +155,7 @@ gulp.task('template-cache-deploy', function () {
 // This task copies all of our required static files over
 gulp.task('files-deploy', function() {
     gulp.src([
-        'app/styles/fonts/**/*',
+        'app/fonts/**/*',
         'app/*.{png,ico,txt}',
         'app/.htaccess'
     ], {'base': 'app'})
@@ -182,10 +178,10 @@ gulp.task('default', ['clean'], function () {
     liveReload.listen();
     // Watch these files and reload if any of them change
     // exclude libs/
-    gulp.watch(config.dirs.app + '/**/*.{html,jpg,js,jpeg,gif,png,woff,ttf,svg}').on('change', function(file) {
+    gulp.watch(config.dirs.app + '/**/*.{html,css,jpg,js,jpeg,gif,png,woff,ttf,svg}').on('change', function(file) {
         liveReload.changed(file.path);
     });
-    gulp.watch('app/**/*.scss', ['styles']); // exclude libs/
+    // gulp.watch('app/**/*.scss', ['styles']); // exclude libs/
     gulp.watch('app/**/*.html', ['template-cache']);
 });
 

@@ -22,8 +22,7 @@ var jwrApp = angular.module('jwrApp', [
         'LocalStorageModule',
         'ui.router'
     ])
-    .run(['$rootScope', function($rootScope) {}
-]);
+    .run(['$rootScope', function($rootScope) {}]);
 
 jwrApp.config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -35,7 +34,7 @@ jwrApp.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '/pages/home.html',
+                templateUrl: 'pages/home.html',
                 // controller: 'HomeCtrl as $home',
                 resolve: {
                     routeProperties: ['$rootScope',
@@ -47,7 +46,7 @@ jwrApp.config(['$stateProvider', '$urlRouterProvider',
             })
             .state('apparel', {
                 url: '/apparel',
-                templateUrl: '/pages/apparel.html',
+                templateUrl: 'pages/apparel.html',
                 // controller: 'ApparelCtrl as $apparel',
                 resolve: {
                     routeProperties: ['$rootScope',
@@ -59,7 +58,7 @@ jwrApp.config(['$stateProvider', '$urlRouterProvider',
             })
             .state('bio', {
                 url: '/meet-us',
-                templateUrl: '/pages/bio.html',
+                templateUrl: 'pages/bio.html',
                 // controller: 'BioCtrl as $bio',
                 resolve: {
                     routeProperties: ['$rootScope',
@@ -71,7 +70,7 @@ jwrApp.config(['$stateProvider', '$urlRouterProvider',
             })
             .state('coaching', {
                 url: '/coaching',
-                templateUrl: '/pages/coaching.html',
+                templateUrl: 'pages/coaching.html',
                 // controller: 'CoachingCtrl as $coaching',
                 resolve: {
                     routeProperties: ['$rootScope',

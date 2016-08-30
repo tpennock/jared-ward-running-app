@@ -1,13 +1,18 @@
 <!doctype html>
 <html lang="en" ng-app="jwrApp">
 
+
 <head>
+    <link rel="canonical" href="http://coachjaredward.org/">
+
     <meta charset="utf-8">
+    <meta name="copyright" content="Copyright (c) 2016 Jared Ward Running Co. All Rights Reserved.">
+
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <title>Jared Ward Running Company</title>
-    <meta name="description" content="">
+    <meta name="description" content="Through Jared Ward's coaching you can improve your speed, train for races and become the best runner you can be.">
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet'>
@@ -17,7 +22,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/font-icons.css" />
-    <link rel="stylesheet" href="revolution/css/settings.css" />
+    <link rel="stylesheet" href="js/revolution/css/settings.css" />
     <link rel="stylesheet" href="css/rev-slider.css" />
     <link rel="stylesheet" href="css/sliders.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -27,11 +32,13 @@
     <link rel="stylesheet" href="css/custom.css" />
     <!-- endbuild -->
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- favicons -->
+    <link rel="icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Apple touch icons -->
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
 
 </head>
 
@@ -55,63 +62,63 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <!-- angular -->
-    <script src="js/angularjs/1.5.7/angular.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-route.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-cookies.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-messages.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-sanitize.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-resource.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-animate.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-touch.min.js"></script>
-    <script src="js/angularjs/1.5.7/angular-aria.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-messages.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-touch.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/1.5.7/angular-aria.min.js"></script>
 
     <!-- third-party libraries -->
-    <script src="js/angular-ui-router.min.js"></script>
-    <script src="js/angular-local-storage/0.2.2/angular-local-storage.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/angular-local-storage/0.2.2/angular-local-storage.js"></script>
 
     <!-- revolution -->
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="js/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:jsApp scripts/app.js -->
-    <script src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
     <!-- main -->
-    <script src="components/core/main.js"></script>
+    <script type="text/javascript" src="components/core/main.js"></script>
 
     <!-- components -->
-    <script src="components/about/about.js"></script>
-    <script src="components/banner/banner.js"></script>
-    <script src="components/charity/charity.js"></script>
-    <script src="components/coaching-packages/coaching-packages.js"></script>
-    <script src="components/contact/contact.js"></script>
-    <script src="components/faq/faq.js"></script>
-    <script src="components/partners/partners.js"></script>
-    <script src="components/results/results.js"></script>
-    <script src="components/services/services.js"></script>
-    <script src="components/shirts/shirts.js"></script>
-    <script src="components/team/team.js"></script>
-    <script src="components/testimonials/testimonials.js"></script>
-    <script src="components/video/video.js"></script>
+    <script type="text/javascript" src="components/about/about.js"></script>
+    <script type="text/javascript" src="components/banner/banner.js"></script>
+    <script type="text/javascript" src="components/charity/charity.js"></script>
+    <script type="text/javascript" src="components/coaching-packages/coaching-packages.js"></script>
+    <script type="text/javascript" src="components/contact/contact.js"></script>
+    <script type="text/javascript" src="components/faq/faq.js"></script>
+    <script type="text/javascript" src="components/partners/partners.js"></script>
+    <script type="text/javascript" src="components/results/results.js"></script>
+    <script type="text/javascript" src="components/services/services.js"></script>
+    <script type="text/javascript" src="components/shirts/shirts.js"></script>
+    <script type="text/javascript" src="components/team/team.js"></script>
+    <script type="text/javascript" src="components/testimonials/testimonials.js"></script>
+    <script type="text/javascript" src="components/video/video.js"></script>
 
-    <script src="components/core/container/container.js"></script>
-    <script src="components/core/footer/footer.js"></script>
-    <script src="components/core/nav/nav.js"></script>
+    <script type="text/javascript" src="components/core/container/container.js"></script>
+    <script type="text/javascript" src="components/core/footer/footer.js"></script>
+    <script type="text/javascript" src="components/core/nav/nav.js"></script>
     <!-- endbuild -->
 
     <!-- template caching -->
     <!-- this file is auto-generated via gulp template-cache(-deploy) -->
-    <script src="scripts/templates.js"></script>
+    <script type="text/javascript" src="scripts/templates.js"></script>
 
 </body>
 </html>

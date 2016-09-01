@@ -155,6 +155,7 @@ gulp.task('template-cache-deploy', function () {
 // This task copies all of our required static files over
 gulp.task('files-deploy', function() {
     gulp.src([
+        'app/assets/**/*',
         'app/fonts/**/*',
         'app/*.{png,ico,txt}',
         'app/.htaccess'

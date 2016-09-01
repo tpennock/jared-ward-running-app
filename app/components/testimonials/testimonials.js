@@ -11,17 +11,17 @@ angular.module('jwrApp.blocks').component('jwrTestimonials', {
             {
                 quote: 'I\'ve always felt like running for me is somewhere between a calling and a daily liberator.',
                 name: 'Jared Ward',
-                subTitle: 'Runner'
+                subTitle: ''
             },
             {
-                quote: 'I\'ve always felt like running for me is somewhere between a calling and a daily liberator.',
+                quote: 'Dream big--dreaming is fun. Set realistic, attainable goals--reaching your goals is motivating. Celebrate the successes--recognizing wins is empowering.',
                 name: 'Jared Ward',
-                subTitle: 'Runner'
+                subTitle: ''
             },
             {
-                quote: 'I\'ve always felt like running for me is somewhere between a calling and a daily liberator.',
+                quote: 'I never cross the finish line alone. I couldn\'t claim personal success for any accomplishment. Each success is the culmination of so many people around me that have sacrificed for the dream. Parents, coaches teammates, siblings, my wife and kids, and many other have all played crucial roles; I would be ignorant not to acknowledge their hand.',
                 name: 'Jared Ward',
-                subTitle: 'Runner'
+                subTitle: ''
             }
         ];
 
@@ -32,7 +32,7 @@ angular.module('jwrApp.blocks').component('jwrTestimonials', {
                 pagination: true,
                 paginationSpeed: 400,
                 singleItem: true,
-                autoPlay: 4000,
+                autoPlay: 9000,
                 stopOnHover: true
             });
         }, 0, 1);

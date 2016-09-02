@@ -157,7 +157,7 @@ gulp.task('files-deploy', function() {
     gulp.src([
         'app/assets/**/*',
         'app/fonts/**/*',
-        'app/*.{png,ico,txt}',
+        'app/*.{png,ico,txt,php}',
         'app/.htaccess'
     ], {'base': 'app'})
     .pipe(gulp.dest('dist'));

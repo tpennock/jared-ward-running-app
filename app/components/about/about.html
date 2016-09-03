@@ -5,42 +5,17 @@
         <div class="row">
 
             <div class="col-sm-6">
-                <div class="skills-progress" id="skills">
+                <div class="skills-progress">
 
-                    <h6>Marathon <span>2:12:55</span></h6>
-                    <div class="progress-solid meter">
-                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar" role="progressbar">
-                            <span class="sr-only">100% Complete</span>
+                    <div ng-repeat="time in $about.times">
+                        <h6>{{time.type}} <span>{{time.displayTime}}</span></h6>
+                        <div class="progress-solid meter">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{$about.getTimePercent(time.time, time.best)}}" class="progress-bar" role="progressbar">
+                                <span class="sr-only">{{$about.getTimePercent(time.time, time.best)}}% Complete</span>
+                            </div>
                         </div>
                     </div>
-
-                    <h6>10K <span>28:36</span></h6>
-                    <div class="progress-solid meter">
-                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" class="progress-bar" role="progressbar">
-                            <span class="sr-only">70% Complete</span>
-                        </div>
-                    </div>
-
-                    <h6>5K <span>13:34</span></h6>
-                    <div class="progress-solid meter">
-                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar" role="progressbar">
-                            <span class="sr-only">90% Complete</span>
-                        </div>
-                    </div>
-
-                    <h6>3K <span>7:52</span></h6>
-                    <div class="progress-solid meter">
-                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar" role="progressbar">
-                            <span class="sr-only">90% Complete</span>
-                        </div>
-                    </div>
-
-                    <h6>Mile <span>4:03</span></h6>
-                    <div class="progress-solid meter" id="animated-skills">
-                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar" role="progressbar">
-                            <span class="sr-only">90% Complete</span>
-                        </div>
-                    </div>
+                    <div id="animated-skills"></div>
 
                 </div>
             </div>

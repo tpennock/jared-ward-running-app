@@ -4,34 +4,38 @@ angular.module('jwrApp.blocks').component('jwrContact', {
     controllerAs: '$contact',
     templateUrl: 'components/contact/contact.html',
     bindings: {},
-    controller: function JwrContactCtrl($log) {
+    controller: function JwrContactCtrl($log, $http) {
         var $contact = this;
 
-        //TODO: handle the form submit and the form data
-        var submitContact = $('#submit-message'),
-            message = $('#msg');
+        $contact.data = {
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        }
 
-        submitContact.on('click', function(e){
-            e.preventDefault();
-
-            var $this = $(this);
-
-            // $.ajax({
-            //     type: "POST",
-            //     url: 'contact.php',
-            //     dataType: 'json',
-            //     cache: false,
-            //     data: $('#contact-form').serialize(),
-            //     success: function(data) {
-            //
-            //         if(data.info !== 'error'){
-            //             $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-            //             message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-            //         } else {
-            //             message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-            //         }
-            //     }
-            // });
-        });
+        //TODO: this doesn't work
+        $contact.submit = function (formData) {
+            $log.info(formData);
+            var payload = {
+                'form_type': 'contact',
+                'utf8': '✓',
+                'contact[name]': formData.name,
+                'contact[email]': formData.email,
+                'contact[subject]': formData.subject,
+                'contact[body]': formData.message
+            }
+            $http({
+                method: 'POST',
+                url: 'https://jared-ward-running-co.myshopify.com/contact'
+            }, payload).then(
+                function successCallback(response) {
+                    $log.info('success: ', response);
+                },
+                function errorCallback(response) {
+                    $log.info('error: ', response);
+                }
+            );
+        };
     }
 });

@@ -10,8 +10,8 @@ angular.module('jwrApp.blocks').component('jwrAbout', {
         $about.times = [
             {
                 type: 'Marathon',
-                time: '02:12:55',
-                displayTime: '2:12:55',
+                time: '02:11:30',
+                displayTime: '2:11:30',
                 best: '02:02:57'
             },
             {
